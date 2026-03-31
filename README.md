@@ -25,7 +25,17 @@ src/
 │   ├── todoStore.svelte.ts  # Shared reactive state
 │   ├── TodoApp.svelte       # UI component
 │   └── webmcp.ts            # WebMCP tool registration
+examples/
+└── declarative-api.html     # Standalone demo of the WebMCP declarative API
 ```
+
+## Examples
+
+### `examples/declarative-api.html`
+
+A self-contained HTML file that demonstrates the **declarative WebMCP API** — an alternative to the programmatic approach used in the main app. Instead of registering tools in JavaScript, tools are described directly in HTML using custom attributes on `<form>` and `<input>` elements (`toolname`, `tooldescription`, `toolparamdescription`). The browser (or polyfill) discovers and exposes them automatically.
+
+Open it directly in a browser — no build step needed.
 
 Both the UI and WebMCP tools share the same store — when an agent calls a tool, the UI updates in real time.
 
